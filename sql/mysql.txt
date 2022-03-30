@@ -1,0 +1,15 @@
+--connect to application
+mysql -u satyam -p
+satyamx
+
+--connect to DB
+show databases;
+use <db_name>;
+
+--connect to tables
+show tables;
+use <table_name>;
+
+
+--show hostname,portnumber of MySQL
+show variables where variable_name in ('hostname','port')
