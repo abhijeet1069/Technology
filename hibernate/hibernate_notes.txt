@@ -1,0 +1,5 @@
+Hibernate is a Object Relational Mapping tool.
+  It has 3 layers:
+    1) POJO - Java Layer
+    2) @Entity - Hibernate layer
+    3) @Table - Table layer in Hibernate for DB
