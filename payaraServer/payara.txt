@@ -1,0 +1,6 @@
+--deploy app
+java -jar ps.jar --deploy [war path+war file] --port [port to listen usually,8080]
+
+--deploy app+server
+java -jar ps.jar --deploy [war file path+war file name] --port [port] --outputUberJar [output file name]
+java -jar ps.jar --deploy D:\JavaEE\Projects\HelloJavaEE8\target\HelloJavaEE8.war --port 8080 --outputUberJar helloToDo.jar 
