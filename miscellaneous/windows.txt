@@ -1,0 +1,2 @@
+--Taskbar not showing of Remote Desktop connection server
+  Restart windows explorer of your local machine from task manager
