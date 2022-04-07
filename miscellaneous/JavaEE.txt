@@ -1,4 +1,13 @@
+Section1: Introduction
+Section2: The theory of JAVA EE
+Section3: Setup (Netbeans IDE, Payara MicroServer, Insomnia REST Client)
+  
+Section4: Getting Your Feet Wet
+  1) New Maven Project - Archtypes: javaee8-essentials-archtype
+  2) Delete source packages like airhacks. create your own
 The 3 key API in Java EE:
   a) JPA - Java Persistence API (Storing/Retrieving data from RDBMS. Now, extends to NoSQL too.)
   b) CDI - Context Dependency Injection (Acts as a bridge between various components of Java EE application)
   c) JAX-RS (Rest Web-Services API)
+  
+ 
