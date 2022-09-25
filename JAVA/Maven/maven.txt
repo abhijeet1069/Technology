@@ -1,0 +1,5 @@
+--clean build file
+mvn clean
+
+--build
+mvn package
