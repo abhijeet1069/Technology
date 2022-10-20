@@ -2,7 +2,7 @@
   <artifact type="jar" name="MultiThreading:jar">
     <output-path>$PROJECT_DIR$/../../Bash</output-path>
     <root id="archive" name="MultiThreading.jar">
-      <element id="module-output" name="MultiThreading" />
+      <element id="module-output" name="JakobJenkov" />
     </root>
   </artifact>
 </component>
