@@ -1,7 +1,5 @@
 package intro;
 
-import test.Parent;
-
 /**
 	JAVA access modifier:
 		private:

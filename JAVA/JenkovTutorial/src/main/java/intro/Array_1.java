@@ -1,6 +1,9 @@
 package intro;
 
 /*
+Artifact:
+		File -> Project Structure
+
  JRE(Java Runtime Environment) contains enough to execute a Java application but not to compile it.
 
 Java SDK contains JRE, Java compiler and a set of other tools.
