@@ -1,2 +1,2 @@
-# Reference
+# Technology
 Reference for various technologies
