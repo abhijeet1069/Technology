@@ -34,7 +34,8 @@ In MacOS Montery 12.6
 	
 jwebserver - simple webserver in JAVA 18.0 . Created a simple streaming service using this.
 
-jwebserver -b <IP> -p <port>
+jwebserver -b <IP> -p <port> -d <absolute address>
+ipconfig getifaddr en0 - Shell command to get private IP
  */
 
 import java.util.Arrays;
