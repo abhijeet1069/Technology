@@ -1,6 +1,6 @@
 package xml;
 
-import javax.parsers.DocumentBuilderFactory;
+//import javax.parsers.DocumentBuilderFactory;
 
 /*
  JAVA uses following tools to process XML:
@@ -9,7 +9,7 @@ import javax.parsers.DocumentBuilderFactory;
  	2. STAX Parser
  		Streaming API for reading and writing XML streams. 
  	3. DOM Parser
- 		DOM(Document Object Model) parser parses an XML document into an object graph. However, object graph takes a lot of memory.
+ 		DOM(Document Object Model) parser parses an XML document into an object graph. However, object graph takes a lot of concurrency.memory.
  	4. XPath Evaluator
  		Built in JAVA library.
  	5. XSL Processor
@@ -24,7 +24,7 @@ import javax.parsers.DocumentBuilderFactory;
 public class XMLDOM {
 
 	public static void main(String[] args) {
-		DocumentBuilderFactory
+		//DocumentBuilderFactory
 
 	}
 

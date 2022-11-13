@@ -75,7 +75,7 @@ public class QueryCustomerInfo {
 	    System.out.println("\nOutput XML:");
 	    System.out.println(outputString);
 	    
-	    /*Convert string to XML in memory and read required tags */
+	    /*Convert string to XML in concurrency.memory and read required tags */
 		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 		InputSource is = new InputSource();
