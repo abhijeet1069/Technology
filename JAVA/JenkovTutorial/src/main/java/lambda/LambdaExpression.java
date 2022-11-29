@@ -2,7 +2,7 @@ package lambda;
 
 import java.util.Comparator;
 
-/*
+/**
 Java lambda expressions were introduced in JAVA 8.
 A lambda expression is this a function which can be created without belonging to any class.
 A Java lambda expression can be passed around as if it was an object and executed on demand.

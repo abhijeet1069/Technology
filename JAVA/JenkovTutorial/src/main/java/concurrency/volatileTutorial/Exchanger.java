@@ -8,7 +8,6 @@ package concurrency.volatileTutorial;
 
  	Accessing volatile variables also prevents instruction reordering which is a normal performance enhancement
  	technique. We should only use volatile variables when you really need to enforce visibility of variables.
-
  **/
 
 public class Exchanger {
