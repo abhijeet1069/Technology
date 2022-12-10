@@ -5,6 +5,11 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ Buffered stream is actually a wrapper for normal stream. For faster execution, read data in chunks rather than in bytes.
+ Also, buffered stream is x2 faster than normal stream.
+ * */
+
 public class TestStream {
 
     public static void printFile() throws IOException {

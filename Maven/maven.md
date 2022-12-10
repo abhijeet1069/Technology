@@ -1,8 +1,17 @@
 # Maven
-    Maven is a powerful build tool for JAVA software projects.
+    Maven is a project management tool for JVM languages.
+    Major Tasks:
+        a) Building source code
+        b) Testing
+        c) Packaging into JAR, WAR or EAR
+        d) Generate JAVA Docs
+        e) Manage dependencies
+
+# Create a Maven quickstart project
+    mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
 
 # Maven Core Concepts
-   1. POM files
+   1. POM (Project Object Model):
         A POM file is an XML representation of project resources like source code, test code, dependencies(external JAR). 
             a) Build life cycles, phases and goals : The build process in Maven is split up into build life
                 cycles, phases and goals.
@@ -11,6 +20,17 @@
             c) Build Plugins : Build plugins are used to insert extra goals into a build phase. If you need 
                 to perform a set of actions for your project which are not covered by the standard Maven build phases and goals, you can add a plugin to the POM file.
             d)  Build Profiles : Build profiles are used if you need to build your project in different ways.
+    2. POM files 
+        Simple POM - pom.xml in project folder
+        Super POM - In maven installation directory
+        Effective POM - mvn help:effective-pom
+
+    3. Maven dependencies
+        a) Snapshot dependency
+            Snapshot means that the software is under development, or unstable.
+        b) Release dependency
+            Release is software that is developed and ready for release or stable.
+
 
 # Sample POM file
  <project xmlns="http://maven.apache.org/POM/4.0.0"

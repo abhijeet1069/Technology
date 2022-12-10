@@ -1,4 +1,4 @@
-package com.satyam.app;
+package com.satyam;
 
 import static org.junit.Assert.assertTrue;
 
