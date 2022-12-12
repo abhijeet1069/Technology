@@ -60,11 +60,11 @@
 				<dict>
 					<key>COMMAND_STRING</key>
 					<string>cd /Users/satyam/Personal/Technology
-sh sync.sh &gt; syncStatus.sh
+sh sync.sh &gt; syncStatus.txt
 date &gt;&gt; syncStatus.txt
 
-cd /Users/satyam/Personal/DiscreteMaths
-sh sync.sh &gt; syncStatus.sh
+cd /Users/satyam/Personal/Diary
+sh sync.sh &gt; syncStatus.txt
 date &gt;&gt; syncStatus.txt</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
