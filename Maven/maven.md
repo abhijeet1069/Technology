@@ -76,4 +76,16 @@
             </repository>
         </repositories>
 
+# Build Lifecycle
+    a) default
+        a) validate : verifies pom.xml
+        b) compile : compiles the source code
+        c) test : runs the unit tests inside the project
+        d) package : packages the source code into an artifact
+        e) integration-test : executes the integration tests
+        f) verify : verifies the results of integration tests
+        g) install : installs the created package into our local repository
+        h) deploy : deploys created package to the remote repository
 
+    b) clean
+    c) site
