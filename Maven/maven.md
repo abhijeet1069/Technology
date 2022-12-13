@@ -53,7 +53,7 @@
         
 # Dependency Scope <scope></scope>:
     a) Compile - Dependecies marked with compile are available only at compile time inside classpath.
-    b)  Provided - Provided by JDK or runtime, available at compile time but not at runtime. 
+    b) Provided - Provided by JDK or runtime, available at compile time but not at runtime. 
             (For ex : Inbuilt server)
     c) Runtime - Available at runtime but not compile time (For ex: JDBC connector)
     d) Test - Available while running and writing tests (For ex : JUnit)
@@ -77,7 +77,7 @@
         </repositories>
 
 # Build Lifecycle
-    a) default
+    a) default - Each stage is inclusive of above stage
         a) validate : verifies pom.xml
         b) compile : compiles the source code
         c) test : runs the unit tests inside the project
@@ -87,5 +87,39 @@
         g) install : installs the created package into our local repository
         h) deploy : deploys created package to the remote repository
 
-    b) clean
-    c) site
+    b) clean - clean compiled jar, metadata
+
+    c) site - generates JAVA documentation
+
+# Plugins and Goals
+    Plugins enables us to run the lifecycle phases in our Maven project via goal.
+    
+    a) Maven compiler plugin - Compiles JAVA files
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+          <configuration>
+            <source>15</source>
+            <target>15</target>
+          </configuration>
+        </plugin>
+                    mvn compiler:compile
+                    mvn compiler:testCompile //compile test classes
+    
+    b) Maven surefire plugin - Runs unit tests and generated test reports
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+                    mvn clean test
+    
+    c) Maven install plugin - Packages source code into an artifact and installs it into the local repository.
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+                    mvn clean install
+    
+    d) Maven deploy - Deploys the created artifact into remote repositoy
