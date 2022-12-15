@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="JenkovTutorial:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/JenkovTutorial_jar/shell</output-path>
-    <root id="archive" name="JenkovTutorial.jar">
-      <element id="module-output" name="JenkovTutorial" />
-    </root>
-  </artifact>
-</component>
