@@ -54,6 +54,7 @@ public class Stream {
         //output stream
         OutputStream output = new FileOutputStream("output.txt");
         output.write("Hello, World".getBytes());
+        input.close();
         output.close();
     }
 }
