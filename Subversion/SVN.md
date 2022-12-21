@@ -23,6 +23,8 @@ Commit - Submitting changes you have made on your working copy to be merged with
         mkdir branches tags trunk
         svn add branches tags trunk
         svn commit -m "first commit"
+    Commit as a different user:
+        svn commit --username satyam --password satyamx
         
 Merge - Applying 2 sets of changes to the same file or files at the same time.
 
@@ -39,7 +41,8 @@ Trunk - A line of development kept separate from branches and tags. In software 
 
 Export - Creation of copy of set of files under version control without any version control metadata.
 
-Update - Retrieval of changes that have been made to the repository since the user last updated their working copy.
+Update - Retrieval of changes that have been made to the repository since the   user last updated their working copy.
+        svn update
 
 Create SVN server (Run CMD as admin):
     Start svnserver windows service:    
