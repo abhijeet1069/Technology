@@ -46,7 +46,18 @@ Resolve
     When a conflict occurs, a user must manually resolve the conflict by diffing the 2 files and select the changes to be committed.
 
 Branch/Branching 
-    The creation of a copy of set of files under version control at a specific point in time. Once brnached, the original set of files and the branched set of files are managed independently from each other.
+    The creation of a copy of set of files under version control at a specific point in time. Once branched, the original set of files and the branched set of files are managed independently from each other.
+        svn copy ./trunk ./tags/tag1
+        Then commit to add changes.
+
+    Show version where branch is added:
+        svn log --stop-on-copy
+
+    Merging changes
+        svn merge -r 12:13 svn://localhost/commandline/branches/branch1
+
+        Adding tag directly in server:
+            svn copy svn://localhost/commandline/trunk svn://localhost/commandline/tags/tag2 --username user1 --password password1
 
 Label/Tag
     A snapshot of a repository at a particular point in time.
