@@ -1,4 +1,7 @@
-##Inserting data
+# SQL Server
+	insert into Movie values(1,'Star Wars');
+
+# MySQL
 use satyam;
 
 ##Interesting way of inserting data

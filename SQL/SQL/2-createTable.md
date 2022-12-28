@@ -1,7 +1,10 @@
+# MySQL
 CREATE DATABASE IF NOT EXISTS satyam;
 
+# MySQL
 USE satyam;
 
+# MySQL
 CREATE TABLE IF NOT EXISTS Actors(
 	ID INT AUTO_INCREMENT,
 	FirstName VARCHAR(20) NOT NULL,
@@ -13,6 +16,12 @@ CREATE TABLE IF NOT EXISTS Actors(
     PRIMARY KEY(ID)
 );
 
-DESC actors;
+# SQL server
+CREATE TABLE Cinema(
+	MovieID INT PRIMARY KEY,
+	CinemaName VARCHAR(30) NOT NULL,
+	RunForDays INT
+);
 
-
+# Rename table
+    exec sp_rename 'schema.old_table_name', 'new_table_name'
