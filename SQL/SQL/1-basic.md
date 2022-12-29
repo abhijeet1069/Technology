@@ -48,10 +48,10 @@ The SQL commands are mainly categorized into:
 	exec sp_columns Actors
 
 
-#Datatypes
-	#Numeric - INT, BIGINT, TINYINT, DECIMAL
-	#String - VARCHAR, CHAR, ENUM, SET, BLOB
-	#Date and Time - DATE, TIME, TIMESTAMP, YEAR
-	#JSON
-	#Spatial Data - Represents location, size and shape. GEOMETRY, POINT
+# Datatypes
+	Numeric - INT, BIGINT, TINYINT, DECIMAL
+	String - VARCHAR, CHAR, ENUM, SET, BLOB
+	Date and Time - DATE, TIME, TIMESTAMP, YEAR
+	JSON
+	Spatial Data - Represents location, size and shape. GEOMETRY, POINT
 

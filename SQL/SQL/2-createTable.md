@@ -17,6 +17,17 @@ CREATE TABLE IF NOT EXISTS Actors(
 );
 
 # SQL server
+CREATE TABLE Actors(
+	ID INT PRIMARY KEY,
+	FirstName VARCHAR(20) NOT NULL,
+    SecondName VARCHAR(20) NOT NULL,
+    DOB DATE NOT NULL,
+    Gender VARCHAR(15) NOT NULL CHECK(Gender IN ('Male','Female','Other')),
+    MaritalStatus VARCHAR(15) CHECK(MaritalStatus IN('Married','Divorced','Single','Unknown')) DEFAULT 'Unknown',
+    NetWorthInMillions DECIMAL NOT NULL,
+);
+
+# SQL server
 CREATE TABLE Cinema(
 	MovieID INT PRIMARY KEY,
 	CinemaName VARCHAR(30) NOT NULL,
