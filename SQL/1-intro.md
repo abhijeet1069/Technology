@@ -1,0 +1,1 @@
+SQL is a standard for accessing and manipulating databases.
