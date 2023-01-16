@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A9D38DA29727B5200AA3939 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9D38D929727B5200AA3939 /* main.swift */; };
+		4A9D38E1297534D300AA3939 /* compute.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4A9D38E0297534D300AA3939 /* compute.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		4A9D38D629727B5200AA3939 /* AddArrayCompute */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AddArrayCompute; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9D38D929727B5200AA3939 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4A9D38E0297534D300AA3939 /* compute.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = compute.metal; sourceTree = "<group>"; };
+		4A9D38E22975397000AA3939 /* CPU and GPU communication.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CPU and GPU communication.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +60,9 @@
 		4A9D38D829727B5200AA3939 /* AddArrayCompute */ = {
 			isa = PBXGroup;
 			children = (
+				4A9D38E22975397000AA3939 /* CPU and GPU communication.png */,
 				4A9D38D929727B5200AA3939 /* main.swift */,
+				4A9D38E0297534D300AA3939 /* compute.metal */,
 			);
 			path = AddArrayCompute;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9D38DA29727B5200AA3939 /* main.swift in Sources */,
+				4A9D38E1297534D300AA3939 /* compute.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
