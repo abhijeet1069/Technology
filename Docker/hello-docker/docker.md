@@ -1,39 +1,46 @@
-# DOCKER
-Docker is a platform for consistently building, running and shipping applications.
+Docker is platform which packages an application and all its dependencies together in form of containers.
 
-Container is a runnable instance of an image.
+Hardware
+    Host OS
+        Docker Engine
+            Container 1
+                Project 1
+                Java 8
+            Container 2
+                Project 2
+                Java 11
 
-# Docker version
-docker version 
+DockerFile
+    Text document which contains all the commands that a user can call on the command line to assemble an image.
 
-# Show container
-docker ps
--a for showing all running and stopped container
+Docker Image
+    Template to create docker container.
 
-# run docker container
-docker run <container-id>
+Docker Container
+    Running instance of the docker image. Containers hold entire package to run application.
 
-# Port  binding (Binds laptop's 6000 port to application's 6379 port)
-docker run -p6000:6379 redis
+Commands:
+    Check Docker version
+        docker -v
 
-# pull an image from docker hub
-docker pull codewithmosh/hello-docker
+    Pull image from docker hub
+        docker pull <image-name>
+    
+    Check local docker images
+        docker images 
+    
+    Show docker containers
+        docker ps
+            -a : all
+    
+    Run docker containers
+        docker run --name pythonContainer -d python
+            -it : interactive mode
+            -evn : environment variables
+            -d : detach mode
+    
+    Run command in docker container
+        docker exec -it <docker-id> python3
 
-# check image available in local machine
-docker image ls
-
-# run docker image
-docker run codewithmosh/hello-docker
--d for detached mode
-
-# pull linux image from docker hub and run it locally (-it flag is for interative)
-docker run -it ubuntu
-
-# docker-compose version
-docker-compose --version
-
-# remove docker images
-docker image <image-id>
-
-# remove all docker images (-f for force remove even running containers)
-docker container rm -f $(docker container ls -aq)
+    Check properties of docker container
+        docker inspect <docker-id>
