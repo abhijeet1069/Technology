@@ -37,10 +37,22 @@ Commands:
         docker run --name pythonContainer -d python
             -it : interactive mode
             -evn : environment variables
-            -d : detach mode
+            -d : detach mode (Run in background mode)
     
     Run command in docker container
-        docker exec -it <docker-id> python3
+        docker exec -it <container-id> python3
 
     Check properties of docker container
-        docker inspect <docker-id>
+        docker inspect <container-id>
+
+    Run mysql container:
+        docker run --name dbContainer -e MYSQL_ROOT_PASSWORD=root -d mysql 
+    
+    Stop a container:
+        docker stop <container-name>
+
+    Restart a container:
+        docker restart <container-name>
+
+    Build a docker container:
+        docker build -t ubuntu-container .
