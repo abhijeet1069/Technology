@@ -1,20 +1,34 @@
-//simple triangle
+/** 
+Vector : 4 numbers representing an x, y and z position in 3D space, along with a 4th component
+    (1 for positions, 0 for directions). For ex [2,4,5,1]
 
-//vertex shader generates clip coordinates
+Matrix : 4x4 set of numbers(in grpahics programming) that represents some mutation(transformation) to perform
+    on a vector.
+    Forx ex : Identity Matrix(No Operation) : [1,0,0,0]
+                                              [0,1,0,0]
+                                              [0,0,1,0]
+                                              [0,0,0,1]
+    Transalation Matrix
+    Rotation Matrix
+    Scale matrix
+    View Transform : Adjust virtual camera
+    Projection Transform : Map 3D space to 2D screen space
+**/
+
 var vertexShaderText = 
 [
     'precision mediump float;',
     '',
-    'attribute vec2 vertPosition;',
+    'attribute vec3 vertPosition;',
     'attribute vec3 vertColor;',
     'varying vec3 fragColor;',
-    'uniform mat4 mWorld;',
-    'uniform mat4 mView;',
-    'uniform mat4 mProj;',
+    'uniform mat4 mWorld',
+    'uniform mat4 mView',
+    'uniform mat4 mProj',
     '',
     'void main()',
     '{',
-    '  fragColor = vertColor;',
+        'fragColor = vertColor;',
     '  gl_Position = mProj * mView * mWorld * vec4(vertPosition,0.0,1.0);',
     '}' 
 ].join('\n');
@@ -86,10 +100,10 @@ var InitDemo = function(){
     //create buffer
     //and transfer buffer to GPU
     var triangleVertices=
-    [ //x,y      R,G,B
-        0.0,0.5,    1.0,1.0,0.0, //top vertex
-        -0.5,-0.5,  0.7,0.0,1.0, //left vertex
-        0.5,-0.5,    0.1,1.0,0.6 //right vertex
+    [ //x,y,z      R,G,B
+        0.0,0.5,0.0,    1.0,1.0,0.0,
+        -0.5,-0.5,0.0,  0.7,0.0,1.0,
+        0.5,-0.5,0.0,    0.1,1.0,0.6
     ];
     var triangleVertexBufferObject = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER,triangleVertexBufferObject);
@@ -99,10 +113,10 @@ var InitDemo = function(){
     var colorAttribLocation = gl.getAttribLocation(program,'vertColor');
     gl.vertexAttribPointer(
         positionAttribLocation,//attribute location
-        2,
+        3,
         gl.FLOAT, //ytpe of elements
         gl.FALSE,
-        5*Float32Array.BYTES_PER_ELEMENT,//size of an individual vertex
+        6*Float32Array.BYTES_PER_ELEMENT,//size of an individual vertex
         0//offset from the beginning of a single vertex to this attribute
     );
     gl.vertexAttribPointer(
@@ -110,11 +124,17 @@ var InitDemo = function(){
         3,
         gl.FLOAT, //ytpe of elements
         gl.FALSE,
-        5*Float32Array.BYTES_PER_ELEMENT,//size of an individual vertex
-        2*Float32Array.BYTES_PER_ELEMENT//offset from the beginning of a single vertex to this attribute
+        6*Float32Array.BYTES_PER_ELEMENT,//size of an individual vertex
+        3*Float32Array.BYTES_PER_ELEMENT//offset from the beginning of a single vertex to this attribute
     );
     gl.enableVertexAttribArray(positionAttribLocation);
     gl.enableVertexAttribArray(colorAttribLocation);
+
+    var matWorldUniformLocation = gl.getUniformLocation(program,'mWorld');
+    var matViewUniformLocation = gl.getUniformLocation(program,'mView');
+    var matProfUniformLocation = gl.getUniformLocation(program,'mProj');
+
+    var projMatrix =  new Float32Array(16);
 
     gl.useProgram(program);
     gl.drawArrays(gl.TRIANGLES,0,3);
