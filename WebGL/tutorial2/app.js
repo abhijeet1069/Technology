@@ -13,6 +13,8 @@ Matrix : 4x4 set of numbers(in grpahics programming) that represents some mutati
     Scale matrix
     View Transform : Adjust virtual camera
     Projection Transform : Map 3D space to 2D screen space
+
+    Matrix do not change per vertex, so uniform
 **/
 
 var vertexShaderText = 
@@ -22,9 +24,9 @@ var vertexShaderText =
     'attribute vec3 vertPosition;',
     'attribute vec3 vertColor;',
     'varying vec3 fragColor;',
-    'uniform mat4 mWorld',
-    'uniform mat4 mView',
-    'uniform mat4 mProj',
+    'uniform mat4 mWorld;', 
+    'uniform mat4 mView;',
+    'uniform mat4 mProj;',
     '',
     'void main()',
     '{',
@@ -132,8 +134,10 @@ var InitDemo = function(){
 
     var matWorldUniformLocation = gl.getUniformLocation(program,'mWorld');
     var matViewUniformLocation = gl.getUniformLocation(program,'mView');
-    var matProfUniformLocation = gl.getUniformLocation(program,'mProj');
+    var matProjUniformLocation = gl.getUniformLocation(program,'mProj');
 
+    var projMatrix =  new Float32Array(16);
+    var projMatrix =  new Float32Array(16);
     var projMatrix =  new Float32Array(16);
 
     gl.useProgram(program);
