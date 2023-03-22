@@ -36,11 +36,11 @@ const vertexShaderSource = `
       // Set up vertex buffer
       const positionBuffer = gl.createBuffer();
       gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-      const numSegments = 10; // number of segments in the circle
+      const numSegments = 360; // number of segments in the circle
       let positions = [];
       positions.push(0, 0); // center of the circle
       for (let i = 0; i <= numSegments; i++) {
-        const angle = i / numSegments * Math.PI * 2;
+        const angle = i / numSegments * 2 * Math.PI ; //For angles 0 to 2PI
         const x = Math.cos(angle);
         const y = Math.sin(angle);
         positions.push(x, y);
@@ -52,9 +52,9 @@ const vertexShaderSource = `
       
       // Set up uniform for color
       const colorUniformLocation = gl.getUniformLocation(program, 'u_color');
-      gl.uniform4f(colorUniformLocation, 1.0, 0.0, 0.0, 1.0); // Red
+      gl.uniform4f(colorUniformLocation, 206/255, 237/255, 199/255, 1.0); // Red
       
       // Clear the canvas and draw the circle
-      gl.clearColor(0.0, 0.0, 0.0, 1.0); // Black
+      gl.clearColor(255, 255, 255, 1.0); // Black
       gl.clear(gl.COLOR_BUFFER_BIT);
       gl.drawArrays(gl.TRIANGLE_FAN, 0, numSegments + 2); // +2 because of the center point
