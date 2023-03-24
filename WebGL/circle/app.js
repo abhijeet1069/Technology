@@ -1,18 +1,18 @@
-  const vertexShaderSource = `
-          attribute vec2 a_position;
-          void main() {
-            float i = 1.0;
-            gl_Position = vec4(a_position, i, i);
-          }
-        `;
+const vertexShaderSource = `
+        attribute vec2 a_position;
+        void main() {
+          float i = 1.0;
+          gl_Position = vec4(a_position, i, i);
+        }
+      `;
         
-        const fragmentShaderSource = `
-          precision mediump float;
-          uniform vec4 u_color;
-          void main() {
-            gl_FragColor = u_color;
-          }
-        `;
+const fragmentShaderSource = `
+  precision mediump float;
+  uniform vec4 u_color;
+  void main() {
+    gl_FragColor = u_color;
+  }
+`;
         
   function drawCircle(gl,scale,color){
     // Set up vertex buffer
