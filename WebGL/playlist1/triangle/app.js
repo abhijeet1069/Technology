@@ -20,50 +20,61 @@ var program;
 var gl;
 
 function drawTriangle(){
-    var triangleVertices = 
+    var position = 
     [// x , y , z     R,  G,  B
-        -0.5,0.5,0.0,   255/255,217/255,102/255,
-        0.0,0.5,0.0, 244/255,177/255,131/255,
-        -0.5,-0.5,0.0,  223/255,166/255,123/255,
-        0.0,-0.5,0.0,  223/255,166/255,123/255
+        -0.5,0.0,0.0, //top left corner then clockwise
+        0.5,-0.5,0.0,
+        0.5,-0.5,0.0,
+        0.5,0.5,0.0
     ];
 
-    var triangleVertexBufferObject = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER,triangleVertexBufferObject);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(triangleVertices),gl.STATIC_DRAW);
+    var color = 
+    [
+        1.0, 0.0, 0.0, // red
+        0.0, 1.0, 0.0, // green
+        0.0, 0.0, 1.0, // blue
+        1.0, 1.0, 1.0 // white
+    ];
+
+    var positionBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,positionBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(position),gl.STATIC_DRAW);
+
+    var colorBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,colorBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(color),gl.STATIC_DRAW);
 
     var positionAttribLocation = gl.getAttribLocation(program,'vertPosition');
-    var colorAttribLocation = gl.getAttribLocation(program,'vertColor');
-
     gl.vertexAttribPointer(
-        positionAttribLocation,
-        4,
-        gl.FLOAT,
-        gl.FALSE,
-        6*Float32Array.BYTES_PER_ELEMENT,
-        0
+        positionAttribLocation, //index of vertex attribute to be modified
+        3, //number of components per vertex attribute. Range 1-4
+        gl.FLOAT, //datatype of each component
+        gl.FALSE,  //normalized
+        3*Float32Array.BYTES_PER_ELEMENT, //byte offset between consecutive vertex
+        0 //byte offset of the first component in the attribute array
     );
+    gl.enableVertexAttribArray(positionAttribLocation);
+
+    var colorAttribLocation = gl.getAttribLocation(program,'vertColor');
     gl.vertexAttribPointer(
         colorAttribLocation,
-        4,
+        3,
         gl.FLOAT,
         gl.FALSE,
-        6*Float32Array.BYTES_PER_ELEMENT,
-        3*Float32Array.BYTES_PER_ELEMENT
+        3*Float32Array.BYTES_PER_ELEMENT,
+        0
     );
-
-    gl.enableVertexAttribArray(positionAttribLocation);
     gl.enableVertexAttribArray(colorAttribLocation);
 
     gl.useProgram(program);
-    gl.drawArrays(gl.TRIANGLES,0,4);
+    gl.drawArrays(gl.TRIANGLE_FAN,0,4);
 }
 
 
 function main(){
     const canvas = document.getElementById('glcanvas');
     canvas.width = 800;
-    canvas.height = 600;
+    canvas.height = 800;
     gl = canvas.getContext('webgl');
     if(!gl){
         console.log("WebGL not supported, using experimental webgl");
