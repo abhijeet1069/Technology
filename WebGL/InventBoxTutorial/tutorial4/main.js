@@ -1,6 +1,6 @@
 const canvas = document.querySelector('canvas');
-canvas.width = 400;
-canvas.height = 400;
+canvas.width = 500;
+canvas.height = 500;
 
 const gl = canvas.getContext('webgl');
 
@@ -8,17 +8,10 @@ if(!gl){
     throw new Error('WebGL not supported');
 }
 
-const matrix = [
-    1,0,0,0,
-    0,1,0,0,
-    0,0,1,0,
-    x,y,z,1
-];
-
 const vertexData = [
-    0,1,0,  //V1.position
-    1,-1,0, //V2.position
-    -1,-1,0 //V3.position
+    0,0.5,0,  //V1.position
+    0.5,-0.5,0, //V2.position
+    -0.5,-0.5,0 //V3.position
 ];
 
 const colorData = [
@@ -42,9 +35,12 @@ gl.shaderSource(vertexShader,`
     attribute vec3 position;
     attribute vec3 color;
     varying vec3 vColor;
+
+    uniform mat4 matrix;
+
     void main(){
         vColor = color;
-        gl_Position = vec4(position,1.0);
+        gl_Position = matrix * vec4(position,1.0);
     }
 `);
 gl.compileShader(vertexShader);
@@ -77,4 +73,20 @@ gl.bindBuffer(gl.ARRAY_BUFFER,colorBuffer);
 gl.vertexAttribPointer(colorLocation,3,gl.FLOAT,false,0,0);
 
 gl.useProgram(program);
-gl.drawArrays(gl.TRIANGLES,0,3);
+
+const uniformLocations = {
+    matrix: gl.getUniformLocation(program,'matrix')
+};
+
+
+const matrix = mat4.create();
+mat4.translate(matrix,matrix,[0.01,-0.001,0]); //translate(output,input,shift) similar to x = x+2. Also, translate first then scale or rotate.
+mat4.scale(matrix,matrix,[1.2,1.0,0]); //for 2d transformations z sclae doesen't matter
+
+function animate(){
+    requestAnimationFrame(animate);
+    mat4.rotateZ(matrix,matrix,(Math.PI/2)/60); //Rotate along Z axis, middle finder towards user, (output,input,angle)
+    gl.uniformMatrix4fv(uniformLocations.matrix,false,matrix);
+    gl.drawArrays(gl.TRIANGLES,0,3);
+}
+animate();
