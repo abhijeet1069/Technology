@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>520</string>
+	<string>521.1</string>
 	<key>AMApplicationVersion</key>
 	<string>2.10</string>
 	<key>AMDocumentVersion</key>
@@ -71,7 +71,7 @@ cd /Users/satyam/Personal/DSA
 sh sync.sh &gt; syncStatus.txt
 date &gt;&gt; syncStatus.txt
 
-cd /Users/satyam/Experiments
+cd /Users/satyam/Personal/ProjectAlpha
 sh sync.sh &gt; syncStatus.txt
 date &gt;&gt; syncStatus.txt</string>
 					<key>CheckedForUserDefaultShell</key>
