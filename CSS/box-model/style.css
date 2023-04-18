@@ -1,0 +1,8 @@
+.box {
+    outline: 50px solid var(--color-primary-dark);
+  }
+  
+  .article + * {
+    margin-top: 100px;
+  }
+  
