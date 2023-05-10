@@ -1,4 +1,0 @@
-2023-04-21 08:08:36.145 --- thread_id="1" thread_name="main" thread_priority="5" --- [ERROR] Error log message
-2023-04-21 08:08:36.146 --- thread_id="1" thread_name="main" thread_priority="5" --- [FATAL] Fatal log message
-2023-04-21 08:11:15.030 --- thread_id="1" thread_name="main" thread_priority="5" --- [ERROR] Error log message
-2023-04-21 08:11:15.032 --- thread_id="1" thread_name="main" thread_priority="5" --- [FATAL] Fatal log message
