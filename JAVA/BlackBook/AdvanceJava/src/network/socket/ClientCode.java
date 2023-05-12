@@ -3,6 +3,8 @@ package network.socket;
 import java.net.*;  
 import java.io.*;  
 
+/*First run ServerCode.java*/
+
 class ClientCode  { 
 	public static void main(String args[]) throws Exception  {  
 		int character;  
