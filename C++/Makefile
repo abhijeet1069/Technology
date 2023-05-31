@@ -1,6 +1,6 @@
 APP_NAME = myApp
 BUILD_DIR = ./bin
-CPP_FILES = ./src/header-files/*.cpp
+CPP_FILES = ./src/5-references.cpp
 
 all: build run
 
