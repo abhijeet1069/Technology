@@ -1,11 +1,11 @@
 APP_NAME = myApp
 BUILD_DIR = ./bin
-CPP_FILES = ./src/5-references.cpp
+CPP_FILES = ./src/9-threads.cpp
 
 all: build run
 
 build:
-	c++ $(CPP_FILES) -o $(BUILD_DIR)/$(APP_NAME)
+	c++ $(CPP_FILES) -o $(BUILD_DIR)/$(APP_NAME) -std=c++14
 
 run:
 	$(BUILD_DIR)/$(APP_NAME)

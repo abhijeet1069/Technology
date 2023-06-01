@@ -12,5 +12,6 @@ int main(){
 
     ref = 2;
 
+    LOG(ref);
     LOG(a);
 }
