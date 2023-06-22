@@ -14,6 +14,13 @@ import java.awt.*;
  Events:
     All events are put in a queue of events java.awt.EventQueue
     The dispatch mechanism of EventQueue is run on a single thread, called the Event Dispatch Thread(EDT)
+
+ Painting:
+    Painting - Painting in Swing is the process by which application updates the display.
+                Painting requests originate in two ways:
+                    a) Swing or AWT libraries may request a repaint in response to some event in the native system or GUI components.
+                        For ex : Application window appears first on screen, window resized
+                    b) Invocation by user from code
  * */
 
 public class OvalComponent extends JComponent {
@@ -29,9 +36,8 @@ public class OvalComponent extends JComponent {
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setSize(200,200);
         f.add(new OvalComponent());
-        f.setVisible(true);
+        f.setVisible(true); //paintComponent() is called for initial rendering
     }
-
     public static void main(String[] args) {
         Runnable doCreateAndShowGUI = new Runnable() {
             @Override
@@ -39,6 +45,6 @@ public class OvalComponent extends JComponent {
                 createAndShowGUI();
             }
         };
-        SwingUtilities.invokeLater(doCreateAndShowGUI);
+        SwingUtilities.invokeLater(doCreateAndShowGUI); //invokeLater() ensures GUI is created and shown on the EDT
     }
 }
