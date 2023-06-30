@@ -1,3 +1,0 @@
-Show hidden Files/Folder:
-    cmd+shift+.
-
