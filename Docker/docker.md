@@ -1,8 +1,8 @@
 Docker is platform which packages an application and all its dependencies together in form of containers.
 
 Docker Images vs Docker Container:
-    Docker image is an executable application artifact. Includes app source code, but also complete environment
-    configuration.
+    Docker image is an executable application artifact. 
+    Single image, multiple containers.
 
     Docker container is a running instance of an image.
 
