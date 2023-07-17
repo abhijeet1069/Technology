@@ -1,3 +1,10 @@
+Docker in Action:
+
+build busybox: minimal linux container
+    docker build -t my-busybox-img .
+    docker run my-busybox-img
+#######################################################################################################
+
 Docker is platform which packages an application and all its dependencies together in form of containers.
 
 Docker Images vs Docker Container:
@@ -13,10 +20,10 @@ Docker Repository:
     Collection of related images with same name but different versions.
 
 Commands:
-    Check Docker version
+    Check docker version
         docker -v
 
-    Show Docker images:
+    Show docker images:
         docker images
 
     Pull image from docker hub
@@ -33,7 +40,7 @@ Commands:
         docker run --name pythonContainer -d python
             -it : interactive mode
             -evn : environment variables
-            -d : detach mode (Run in background mode)
+            -d : detach mode (Detached means that the container will run in background, without being attached to any input or output stream.)
     
     Run command in docker container
         docker exec -it <container-id> python3
@@ -58,5 +65,4 @@ Port Binding:
     the outside world.
          docker run -d -p 9000:80  nginx
          docker run --name web-app  -d -p 80:80 nginx
-            Run a docker container with nginx image, with name web-app in detached mode, with localhost port 80
-            binded to docker container port 80
+            Run a docker container with nginx image, with name web-app in detached mode, with localhost port 80 binded to docker container port 80
