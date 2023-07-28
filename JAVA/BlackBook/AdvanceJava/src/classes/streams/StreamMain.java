@@ -1,18 +1,33 @@
 package classes.streams;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
-Java streams represent a pipeline through which data will flow and the functions to operate on the data.
-A pipeline in this instance consists of a stream source, followed by zero or more intermediate operations,
-and a terminal operation.
+A stream is not a data-structure, instead it takes input from Collections, Arrays or I/O channels.
+Streams don't change the original data structure, they only provide the result as per the pipelined methods.
+
+Lambda expressions are similar to methods but they do not need a name and can be implemented right in the body of a method.
  * */
 
 public class StreamMain {
+	
+	//arrays stream
+	public static void arrayStream() {
+		int[] arr = {2,3,10,11,13,14,19};
+		Arrays.stream(arr).filter(n->(n%2 == 0)).forEach(System.out::println);
+	}
+	
+	//Collection Stream
+	public static void setStream() {
+		Set<Integer> set = new HashSet<Integer>();
+		set.add(12); set.add(14); set.add(23); set.add(25); set.add(38); set.add(77);
+		set.stream().filter(n->(n%2 == 0)).forEach(System.out::println);
+	}
 	
 	// Intermediate operations
 	
