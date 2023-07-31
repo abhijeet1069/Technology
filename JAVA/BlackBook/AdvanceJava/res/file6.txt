@@ -1,1 +1,1 @@
-Some methods are defined here.
+Some text Some more text
