@@ -67,11 +67,8 @@ cd /Users/satyam/Personal/Diary
 sh sync.sh &gt; syncStatus.txt
 date &gt;&gt; syncStatus.txt
 
-cd /Users/satyam/Personal/DSA
-sh sync.sh &gt; syncStatus.txt
-date &gt;&gt; syncStatus.txt
 
-cd /Users/satyam/Personal/ProjectAlpha
+cd /Users/satyam/Personal/OpenSource
 sh sync.sh &gt; syncStatus.txt
 date &gt;&gt; syncStatus.txt</string>
 					<key>CheckedForUserDefaultShell</key>
