@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Properties>
+		<Property name="filename">./logs</Property> <!--filename will be referenced below-->
+	</Properties>
+	<Appenders>
+		<RollingFile
+			name="file"
+			fileName="${filename}/logdemo.log"
+			filePattern="${filename}/logdemo-%d{HH:mm:ss.SSS}.log">
+			<PatternLayout>
+				<Pattern>"%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"</Pattern>
+			</PatternLayout>
+			<SizeBasedTriggeringPolicy size="1 KB" />
+		</RollingFile>
+
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		
+	</Appenders>
+	<Loggers>
+
+		<!-- works on log4j.customLogger.* -->
+		<!-- additivity=false removes root logger which can cause duplicate logging, by default its true -->
+		<Logger name="log4j.customLogger" level="trace" additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger>
+		
+		<!-- File Based Logging -->
+		<Logger name="log4j.fileLogger" level="trace" additivity="false">
+			<AppenderRef ref="file" />
+		</Logger>
+
+		<!-- works on log4j.Lec2_Log4jConfig -->
+		<Root level="error">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>
