@@ -68,7 +68,7 @@ sh sync.sh &gt; syncStatus.txt
 date &gt;&gt; syncStatus.txt
 
 
-cd /Users/satyam/Personal/OpenSource
+cd /Users/satyam/Personal/OSSU
 sh sync.sh &gt; syncStatus.txt
 date &gt;&gt; syncStatus.txt</string>
 					<key>CheckedForUserDefaultShell</key>
