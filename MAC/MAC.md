@@ -1,6 +1,11 @@
-Show hidden Files/Folder:
+# Show hidden Files/Folder:
     cmd+shift+.
 
-Fix Eclipse issue after MAC restart:
+# Fix Eclipse issue after MAC restart:
     sudo codesign --force --deep --sign - /Applications/Eclipse.app
 
+# Lock MAC:
+	cmd+ctrl+q
+
+# ScreenShot
+	shift+cmd+4

@@ -1,7 +1,0 @@
-Go to declaration or usages:
-    CMD+B (F3 in Eclipse)
-
-System.out.println
-    sout+TAB
-
-
