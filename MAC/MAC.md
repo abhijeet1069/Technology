@@ -9,3 +9,6 @@
 
 # ScreenShot
 	shift+cmd+4
+
+# Show Desktop
+    fn+f11
