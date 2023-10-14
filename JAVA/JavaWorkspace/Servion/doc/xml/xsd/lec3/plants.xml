@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="plants.xsd">
+	<genus>Cercis</genus>
+	<species>Canadensis</species>
+	<common_name>Eastern Redbud</common_name>
+	<height>100</height>
+	<begin_bloom_date>2017-04-15</begin_bloom_date>
+	<end_bloom_date>2017-05-25</end_bloom_date>
+	<edible>true</edible>
+	<sun_tolerance>full_sun</sun_tolerance>
+	<bloom_color>blue</bloom_color>
+</plant>

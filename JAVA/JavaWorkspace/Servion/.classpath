@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/satyam/Personal/Technology/JAVA/JavaWorkspace/Servion/lib/gson/gson-2.10.1.jar"/>
+	<classpathentry kind="lib" path="/Users/satyam/Personal/Technology/JAVA/JavaWorkspace/Servion/lib/jaxb/activation-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/satyam/Personal/Technology/JAVA/JavaWorkspace/Servion/lib/jaxb/istack-commons-runtime-2.24.jar"/>
+	<classpathentry kind="lib" path="/Users/satyam/Personal/Technology/JAVA/JavaWorkspace/Servion/lib/jaxb/jaxb-api-2.3.1.jar"/>
+	<classpathentry kind="lib" path="/Users/satyam/Personal/Technology/JAVA/JavaWorkspace/Servion/lib/jaxb/jaxb-runtime-2.3.2.jar"/>
+	<classpathentry kind="lib" path="/Users/satyam/Personal/Technology/JAVA/JavaWorkspace/Servion/lib/log4j/log4j-1.2.12.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
