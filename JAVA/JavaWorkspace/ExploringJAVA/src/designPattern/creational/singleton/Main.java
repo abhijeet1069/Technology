@@ -1,22 +1,9 @@
-package designPattern.singleTon;
-
-class Hello{
-	
-	String threadName = Thread.currentThread().getName();
-	
-	Hello(){
-		System.out.println(this.getClass().getName()+" object created" );
-	}
-	
-	public void printMessage() {
-		//System.out.println(+": Hello,World");
-	}
-}
+package designPattern.creational.singleton;
 
 public class Main {
 	public static void main(String[] args) {
 		
-		int threadCount = 5;
+		int threadCount = 100;
 		
 		Thread[] threads = new Thread[threadCount];
 		
@@ -24,9 +11,10 @@ public class Main {
 			threads[i] = new Thread(()->{
 				
 				//actual invocation
-				Hello hello = new Hello();
-				hello.printMessage();
-			
+				SingleTon singleton = null;
+				singleton = SingleTon.getInstance();
+				//singleton = new SingleTon();
+				System.out.println(" Object of "+singleton.getClass().getName()+" with ID : "+singleton.hashCode());
 			
 			});
 			threads[i].start();
