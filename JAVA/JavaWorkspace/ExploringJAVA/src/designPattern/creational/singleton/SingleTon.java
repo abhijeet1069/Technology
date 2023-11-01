@@ -4,7 +4,7 @@ public class SingleTon {
 	
 	private static SingleTon obj = null;
 	
-	protected SingleTon() {}
+	private SingleTon() {}
 	
 	public static SingleTon getInstance() {
 		if(obj == null) {

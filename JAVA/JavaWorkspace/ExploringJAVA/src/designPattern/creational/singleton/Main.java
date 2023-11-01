@@ -14,7 +14,7 @@ public class Main {
 				SingleTon singleton = null;
 				singleton = SingleTon.getInstance();
 				//singleton = new SingleTon();
-				System.out.println(" Object of "+singleton.getClass().getName()+" with ID : "+singleton.hashCode());
+				System.out.println(" Object of "+singleton.getClass().getName()+" with ID : "+System.identityHashCode(singleton));
 			
 			});
 			threads[i].start();
