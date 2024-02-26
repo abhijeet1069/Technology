@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.satyam</groupId>
+  <artifactId>swingXMLValidator</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>swingXMLValidator</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <!-- JAXB API -->
+<dependency>
+   	<groupId>javax.xml.bind</groupId>
+   	<artifactId>jaxb-api</artifactId>
+   	<version>2.3.1</version>
+</dependency>
+
+<!-- Dependency on Runtime -->
+<dependency>
+    <groupId>javax.activation</groupId>
+    <artifactId>activation</artifactId>
+    <version>1.1.1</version>
+</dependency>
+
+<!-- JAXB Runtime : Tried with jax-runtime 4.0 but did not work -->
+<dependency>
+    <groupId>org.glassfish.jaxb</groupId>
+    <artifactId>jaxb-runtime</artifactId>
+    <version>2.3.9</version>
+</dependency>
+
+<!--JUnit : Unit Testing-->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+</dependency>
+  </dependencies>
+</project>
